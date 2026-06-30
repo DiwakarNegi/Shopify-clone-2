@@ -13,6 +13,8 @@ import {
   CreditCard,
   Globe,
 } from 'lucide-react'
+import { Link } from 'react-router-dom'
+
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -25,20 +27,20 @@ const columns: FooterColumn[] = [
   {
     heading: 'Shop',
     links: [
-      { label: 'All Rugs', href: '#' },
-      { label: 'New Arrivals', href: '#' },
-      { label: 'Best Sellers', href: '#' },
-      { label: 'Sale', href: '#' },
-      { label: 'Outdoor Rugs', href: '#' },
-      { label: 'Rug Pads', href: '#' },
+      { label: 'All Rugs', href: '/collection' },
+      { label: 'New Arrivals', href: '/collection' },
+      { label: 'Best Sellers', href: '/collection' },
+      { label: 'Sale', href: '/collection' },
+      { label: 'Outdoor Rugs', href: '/collection' },
+      { label: 'Rug Pads', href: '/collection' },
     ],
   },
   {
     heading: 'Help',
     links: [
-      { label: 'FAQs', href: '#' },
-      { label: 'Washing Guide', href: '#' },
-      { label: 'Rug Size Guide', href: '#' },
+      { label: 'FAQs', href: '/about' },
+      { label: 'Washing Guide', href: '/about#washer-calculator' },
+      { label: 'Rug Size Guide', href: '/about#washer-calculator' },
       { label: 'Order Status', href: '#' },
       { label: 'Returns & Exchanges', href: '#' },
       { label: 'Contact Us', href: '#' },
@@ -47,8 +49,8 @@ const columns: FooterColumn[] = [
   {
     heading: 'Company',
     links: [
-      { label: 'Our Story', href: '#' },
-      { label: 'Sustainability', href: '#' },
+      { label: 'Our Story', href: '/about' },
+      { label: 'Sustainability', href: '/about' },
       { label: 'Press', href: '#' },
       { label: 'Careers', href: '#' },
       { label: 'Affiliate Program', href: '#' },
@@ -120,12 +122,21 @@ export default function Footer() {
               <ul className="space-y-3">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="font-sans text-sm text-ivory/70 hover:text-ivory transition-colors duration-150"
-                    >
-                      {link.label}
-                    </a>
+                    {link.href.startsWith('/') ? (
+                      <Link
+                        to={link.href}
+                        className="font-sans text-sm text-ivory/70 hover:text-ivory transition-colors duration-150"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="font-sans text-sm text-ivory/70 hover:text-ivory transition-colors duration-150"
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const pageVariants = {
   initial: { opacity: 0, y: 16 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' as const } },
   exit: { opacity: 0, transition: { duration: 0.2 } },
 }
 
@@ -13,17 +13,13 @@ const SORT_OPTIONS = ['Best Sellers', 'New Arrivals', 'Price: Low to High', 'Pri
 const SIZES = ['2×3', '4×6', '5×8', '8×10', 'Runner', 'Round']
 const STYLES = ['Modern', 'Traditional', 'Bohemian', 'Minimalist', 'Coastal']
 
-const products = Array.from({ length: 12 }, (_, i) => ({
-  id: String(i + 1),
-  name: ['Isla Jute-Look Rug', 'Margot Persian Rug', 'Cleo Geometric Rug', 'Odette Boho Rug',
-    'Fern Abstract Rug', 'Lola Striped Runner', 'Nova Trellis Rug', 'Sage Border Rug',
-    'Ember Tribal Rug', 'Drift Ocean Rug', 'Pearl Shag Rug', 'Cedar Vintage Rug'][i],
-  price: [129, 189, 109, 159, 145, 89, 175, 135, 155, 165, 195, 149][i],
-  imageUrl: `https://picsum.photos/seed/rug${i + 1}/600/600`,
-  rating: 4.7 + Math.random() * 0.3,
-  reviews: Math.floor(500 + Math.random() * 3000),
-  badge: i === 1 ? 'Sale' : i === 2 ? 'New' : i === 0 ? 'Best Seller' : undefined,
+import { PRODUCTS } from '../data/products'
+
+const products = PRODUCTS.map((p) => ({
+  ...p,
+  reviews: p.reviewCount,
 }))
+
 
 export default function CollectionPage() {
   const [sort, setSort] = useState('Best Sellers')

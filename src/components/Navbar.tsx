@@ -48,7 +48,7 @@ const navItems: NavItem[] = [
   },
   { label: 'How It Works', to: '/#how-it-works' },
   { label: 'Design Your Own', to: '/#design' },
-  { label: 'About', to: '/#about' },
+  { label: 'About', to: '/about' },
 ]
 
 function MegaMenu({ sections }: { sections: MegaMenuSection[] }) {

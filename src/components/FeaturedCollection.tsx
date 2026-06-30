@@ -7,53 +7,17 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Heart, ShoppingBag, Star, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
-
-interface ColorSwatch { name: string; hex: string }
-interface Product {
-  id: string; name: string; price: number; originalPrice?: number
-  badge?: string; rating: number; reviewCount: number
-  imageUrl: string; hoverImageUrl: string; swatches: ColorSwatch[]
-}
-
-const products: Product[] = [
-  {
-    id: '1', name: 'Isla Jute-Look Indoor/Outdoor Rug', price: 129, badge: 'Best Seller',
-    rating: 4.8, reviewCount: 3421,
-    imageUrl: 'https://picsum.photos/seed/isla1/600/600',
-    hoverImageUrl: 'https://picsum.photos/seed/isla2/600/600',
-    swatches: [{ name: 'Natural', hex: '#d4c8b8' }, { name: 'Sage', hex: '#8a9b7e' }, { name: 'Rust', hex: '#c4614a' }, { name: 'Charcoal', hex: '#3d3530' }],
-  },
-  {
-    id: '2', name: 'Margot Persian-Style Area Rug', price: 189, originalPrice: 249, badge: 'Sale',
-    rating: 4.9, reviewCount: 2187,
-    imageUrl: 'https://picsum.photos/seed/margot1/600/600',
-    hoverImageUrl: 'https://picsum.photos/seed/margot2/600/600',
-    swatches: [{ name: 'Terracotta', hex: '#c4614a' }, { name: 'Navy', hex: '#2d3a5e' }, { name: 'Blush', hex: '#e8d5c4' }],
-  },
-  {
-    id: '3', name: 'Cleo Geometric Flatweave Rug', price: 109, badge: 'New',
-    rating: 4.7, reviewCount: 892,
-    imageUrl: 'https://picsum.photos/seed/cleo1/600/600',
-    hoverImageUrl: 'https://picsum.photos/seed/cleo2/600/600',
-    swatches: [{ name: 'Ivory', hex: '#faf9f6' }, { name: 'Stone', hex: '#9e9589' }, { name: 'Black', hex: '#1a1a1a' }],
-  },
-  {
-    id: '4', name: 'Odette Boho Diamond Area Rug', price: 159,
-    rating: 4.8, reviewCount: 1654,
-    imageUrl: 'https://picsum.photos/seed/odette1/600/600',
-    hoverImageUrl: 'https://picsum.photos/seed/odette2/600/600',
-    swatches: [{ name: 'Sage', hex: '#8a9b7e' }, { name: 'Blush', hex: '#e8d5c4' }, { name: 'Indigo', hex: '#4a5568' }, { name: 'Natural', hex: '#d4c8b8' }],
-  },
-]
+import { PRODUCTS, type Product } from '../data/products'
 
 const containerVariants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.1 } },
-}
+} as const
 const cardVariants = {
   hidden: { opacity: 0, y: 24 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
-}
+  show:   { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const } },
+} as const
+
 
 function ProductCard({ product }: { product: Product }) {
   const [hovered, setHovered] = useState(false)
@@ -128,6 +92,8 @@ function ProductCard({ product }: { product: Product }) {
 }
 
 export default function FeaturedCollection() {
+  const products = PRODUCTS.slice(0, 4)
+
   return (
     <section className="py-16 md:py-24 bg-warm-gray">
       <div className="section-container">

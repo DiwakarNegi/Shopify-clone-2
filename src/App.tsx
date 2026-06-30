@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import ProductPage from './pages/ProductPage'
 import CollectionPage from './pages/CollectionPage'
+import AboutPage from './pages/AboutPage'
 
 export default function App() {
   const location = useLocation()
@@ -22,6 +23,7 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/product/:id" element={<ProductPage />} />
             <Route path="/collection" element={<CollectionPage />} />
+            <Route path="/about" element={<AboutPage />} />
           </Routes>
         </AnimatePresence>
       </main>
