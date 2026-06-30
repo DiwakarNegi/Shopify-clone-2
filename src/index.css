@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-ivory text-charcoal font-sans;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  button,
+  a {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  /* Reusable CTA button styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-charcoal text-ivory
+           font-sans font-medium text-sm tracking-widest uppercase
+           px-8 py-4 transition-all duration-300
+           hover:bg-terracotta hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           border border-charcoal text-charcoal
+           font-sans font-medium text-sm tracking-widest uppercase
+           px-8 py-4 transition-all duration-300
+           hover:bg-charcoal hover:text-ivory active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-1 text-charcoal font-sans font-medium
+           text-sm underline underline-offset-4 decoration-1
+           hover:text-terracotta transition-colors duration-200;
+  }
+
+  /* Section container */
+  .section-container {
+    @apply max-w-8xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Card hover lift */
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar but keep scrolling */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Text balance for headings */
+  .text-balance {
+    text-wrap: balance;
+  }
+}
