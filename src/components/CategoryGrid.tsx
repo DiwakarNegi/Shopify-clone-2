@@ -1,3 +1,5 @@
+'use client'
+
 /**
  * CategoryGrid — shop-by-room cards with scroll-triggered stagger animation.
  * First card spans 2 rows on desktop (featured layout).
@@ -5,7 +7,7 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 interface Category {
   id: string; label: string; subLabel?: string
@@ -33,7 +35,7 @@ function CategoryCard({ category }: { category: Category }) {
   return (
     <motion.div variants={cardVariants} className={category.featured ? 'row-span-2' : ''}>
       <Link
-        to="/collection"
+        href="/collection"
         className="group relative flex overflow-hidden bg-warm-gray w-full h-full"
         style={{ minHeight: category.featured ? '560px' : '260px' }}
       >
@@ -74,7 +76,7 @@ export default function CategoryGrid() {
             <p className="font-sans text-xs font-semibold tracking-[0.2em] uppercase text-stone mb-2">Browse</p>
             <h2 className="font-serif text-3xl md:text-display-md font-medium text-charcoal">Shop by Room</h2>
           </div>
-          <Link to="/collection" className="btn-ghost hidden sm:inline-flex">
+          <Link href="/collection" className="btn-ghost hidden sm:inline-flex">
             View All <ArrowRight size={14} />
           </Link>
         </motion.div>
@@ -90,7 +92,7 @@ export default function CategoryGrid() {
         </motion.div>
 
         <div className="mt-8 text-center sm:hidden">
-          <Link to="/collection" className="btn-ghost">View All Categories <ArrowRight size={14} /></Link>
+          <Link href="/collection" className="btn-ghost">View All Categories <ArrowRight size={14} /></Link>
         </div>
       </div>
     </section>

@@ -1,3 +1,5 @@
+'use client'
+
 /**
  * FeaturedCollection — horizontally scrollable on mobile, 4-col grid on desktop.
  * Framer Motion stagger on viewport entry. Product cards link to ProductPage.
@@ -6,7 +8,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Heart, ShoppingBag, Star, ArrowRight } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { PRODUCTS, type Product } from '../data/products'
 
 const containerVariants = {
@@ -26,7 +28,7 @@ function ProductCard({ product }: { product: Product }) {
 
   return (
     <motion.div variants={cardVariants} className="flex flex-col" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-      <Link to={`/product/${product.id}`} className="block relative aspect-square overflow-hidden bg-warm-gray">
+      <Link href={`/product/${product.id}`} className="block relative aspect-square overflow-hidden bg-warm-gray">
         <img src={product.imageUrl}      alt={product.name} className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 ${hovered ? 'opacity-0 scale-105' : 'opacity-100 scale-100'}`} />
         <img src={product.hoverImageUrl} alt={`${product.name} in room`} className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 ${hovered ? 'opacity-100 scale-105' : 'opacity-0 scale-100'}`} />
 
@@ -69,7 +71,7 @@ function ProductCard({ product }: { product: Product }) {
           {product.swatches.length > 3 && <span className="text-stone text-[10px] font-medium ml-1">+{product.swatches.length - 3}</span>}
         </div>
 
-        <Link to={`/product/${product.id}`}>
+        <Link href={`/product/${product.id}`}>
           <h3 className="font-sans text-sm font-medium text-charcoal leading-snug hover:text-terracotta transition-colors duration-150 line-clamp-2">{product.name}</h3>
         </Link>
 
@@ -108,7 +110,7 @@ export default function FeaturedCollection() {
             <p className="font-sans text-xs font-semibold tracking-[0.2em] uppercase text-stone mb-2">Customer Favorites</p>
             <h2 className="font-serif text-3xl md:text-display-md font-medium text-charcoal">Best Sellers</h2>
           </div>
-          <Link to="/collection" className="btn-ghost hidden sm:inline-flex">Shop All <ArrowRight size={14} /></Link>
+          <Link href="/collection" className="btn-ghost hidden sm:inline-flex">Shop All <ArrowRight size={14} /></Link>
         </motion.div>
 
         <motion.div
@@ -126,7 +128,7 @@ export default function FeaturedCollection() {
         </motion.div>
 
         <div className="mt-10 text-center sm:hidden">
-          <Link to="/collection" className="btn-secondary">View All Best Sellers</Link>
+          <Link href="/collection" className="btn-secondary">View All Best Sellers</Link>
         </div>
       </div>
     </section>

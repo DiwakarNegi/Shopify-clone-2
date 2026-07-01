@@ -1,3 +1,5 @@
+'use client'
+
 /**
  * Hero — full-viewport lifestyle banner with Framer Motion entrance animation.
  * Text stagger: eyebrow → headline → body → buttons, each offset by 0.1s.
@@ -5,7 +7,7 @@
 
 import { motion } from 'framer-motion'
 import { ArrowDown } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 const container = {
   hidden: {},
@@ -58,7 +60,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.div variants={item} className="flex flex-col sm:flex-row gap-4">
-              <Link to="/collection" className="btn-primary text-center">
+              <Link href="/collection" className="btn-primary text-center">
                 Shop All Rugs
               </Link>
               <a

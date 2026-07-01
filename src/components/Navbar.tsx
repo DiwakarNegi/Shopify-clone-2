@@ -1,10 +1,12 @@
+'use client'
+
 /**
  * Navbar — sticky header with mega-dropdown and mobile drawer.
- * Uses React Router Link for client-side navigation.
+ * Uses Next.js Link for client-side navigation.
  */
 
 import { useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { Search, User, ShoppingBag, Menu, X, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -70,7 +72,7 @@ function MegaMenu({ sections }: { sections: MegaMenuSection[] }) {
               {section.links.map((link) => (
                 <li key={link.label}>
                   <Link
-                    to={link.href}
+                    href={link.href}
                     className="font-sans text-sm text-charcoal hover:text-terracotta transition-colors duration-150"
                   >
                     {link.label}
@@ -105,7 +107,7 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
             className="relative ml-auto w-full max-w-sm bg-ivory h-full overflow-y-auto shadow-2xl"
           >
             <div className="flex items-center justify-between px-6 py-5 border-b border-light-border">
-              <Link to="/" onClick={onClose} className="font-serif font-semibold text-xl tracking-tight">RugCo</Link>
+              <Link href="/" onClick={onClose} className="font-serif font-semibold text-xl tracking-tight">RugCo</Link>
               <button onClick={onClose} className="p-1 text-charcoal hover:text-terracotta transition-colors">
                 <X size={22} />
               </button>
@@ -138,7 +140,7 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                                   <ul className="space-y-2">
                                     {section.links.map((link) => (
                                       <li key={link.label}>
-                                        <Link to={link.href} onClick={onClose} className="text-sm text-charcoal hover:text-terracotta transition-colors">
+                                        <Link href={link.href} onClick={onClose} className="text-sm text-charcoal hover:text-terracotta transition-colors">
                                           {link.label}
                                         </Link>
                                       </li>
@@ -152,7 +154,7 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                       </AnimatePresence>
                     </>
                   ) : (
-                    <Link to={item.to} onClick={onClose} className="flex items-center py-4 font-sans font-medium text-base text-charcoal hover:text-terracotta transition-colors">
+                    <Link href={item.to} onClick={onClose} className="flex items-center py-4 font-sans font-medium text-base text-charcoal hover:text-terracotta transition-colors">
                       {item.label}
                     </Link>
                   )}
@@ -195,7 +197,7 @@ export default function Navbar() {
       <header className={`sticky top-0 z-40 w-full transition-all duration-300 ${scrolled ? 'bg-ivory/95 backdrop-blur-md shadow-sm' : 'bg-ivory'}`}>
         <div className="section-container">
           <div className="flex items-center justify-between h-[68px]">
-            <Link to="/" className="flex-shrink-0 font-serif font-semibold text-2xl tracking-tight text-charcoal hover:text-terracotta transition-colors">
+            <Link href="/" className="flex-shrink-0 font-serif font-semibold text-2xl tracking-tight text-charcoal hover:text-terracotta transition-colors">
               RugCo
             </Link>
 
@@ -208,7 +210,7 @@ export default function Navbar() {
                   onMouseLeave={handleMouseLeave}
                 >
                   <Link
-                    to={item.to}
+                    href={item.to}
                     className={`inline-flex items-center gap-1 px-4 py-2 font-sans text-sm font-medium tracking-wide transition-colors duration-150 ${activeMenu === item.label ? 'text-terracotta' : 'text-charcoal hover:text-terracotta'}`}
                   >
                     {item.label}

@@ -13,7 +13,7 @@ import {
   CreditCard,
   Globe,
 } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 
 // ─── Data ────────────────────────────────────────────────────────────────────
@@ -124,7 +124,7 @@ export default function Footer() {
                   <li key={link.label}>
                     {link.href.startsWith('/') ? (
                       <Link
-                        to={link.href}
+                        href={link.href}
                         className="font-sans text-sm text-ivory/70 hover:text-ivory transition-colors duration-150"
                       >
                         {link.label}
