@@ -25,19 +25,19 @@ const steps = [
     num: '01',
     title: 'Prep & Lay',
     desc: 'Roll out your non-slip Rug Pad on a clean, dry floor. Our rug pads use a patented Cling-Effect™ backing (similar to Velcro) that prevents shifting and sliding.',
-    image: 'https://picsum.photos/seed/about_prep/600/400'
+    image: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=600&q=80'
   },
   {
     num: '02',
     title: 'Roll & Cling',
     desc: 'Fold the lightweight Rug Cover in half, align it with the corners of the pad, and smooth it down. The cover immediately locks onto the pad without wrinkles.',
-    image: 'https://picsum.photos/seed/about_roll/600/400'
+    image: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=600&q=80'
   },
   {
     num: '03',
     title: 'Live & Wash',
     desc: 'Spills, muddy paws, pet stains, or dust? No stress. Simply peel the Rug Cover off the pad and toss it in your standard home washing machine. It comes out looking brand new!',
-    image: 'https://picsum.photos/seed/about_wash/600/400'
+    image: 'https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=600&q=80'
   }
 ]
 
@@ -218,7 +218,7 @@ export default function AboutPage() {
           </div>
           <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
             <img
-              src="https://picsum.photos/seed/about_hero_main/800/600"
+              src="https://images.unsplash.com/photo-1617806118233-18e1db207f62?auto=format&fit=crop&w=800&q=80"
               alt="Cozy clean living room with pets"
               className="w-full h-full object-cover"
             />

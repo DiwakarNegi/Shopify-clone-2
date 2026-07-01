@@ -28,8 +28,8 @@ export const PRODUCTS: Product[] = [
     badge: 'Best Seller',
     rating: 4.8,
     reviewCount: 3421,
-    imageUrl: 'https://picsum.photos/seed/rug1/600/600',
-    hoverImageUrl: 'https://picsum.photos/seed/rug1_hover/600/600',
+    imageUrl: 'https://images.unsplash.com/photo-1600121848594-d8644e57abbd?auto=format&fit=crop&w=800&q=80',
+    hoverImageUrl: 'https://images.unsplash.com/photo-1534889156217-d3424e650e41?auto=format&fit=crop&w=800&q=80',
     swatches: [
       { name: 'Natural Jute', hex: '#D4C8B8', imageIndex: 0 },
       { name: 'Sage Green', hex: '#8A9B7E', imageIndex: 1 },
@@ -53,8 +53,8 @@ export const PRODUCTS: Product[] = [
     badge: 'Sale',
     rating: 4.9,
     reviewCount: 2187,
-    imageUrl: 'https://picsum.photos/seed/rug2/600/600',
-    hoverImageUrl: 'https://picsum.photos/seed/rug2_hover/600/600',
+    imageUrl: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80',
+    hoverImageUrl: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=800&q=80',
     swatches: [
       { name: 'Vintage Terracotta', hex: '#C4614A', imageIndex: 2 },
       { name: 'Classic Navy', hex: '#2D3A5E', imageIndex: 5 },
@@ -76,8 +76,8 @@ export const PRODUCTS: Product[] = [
     badge: 'New',
     rating: 4.7,
     reviewCount: 892,
-    imageUrl: 'https://picsum.photos/seed/rug3/600/600',
-    hoverImageUrl: 'https://picsum.photos/seed/rug3_hover/600/600',
+    imageUrl: 'https://images.unsplash.com/photo-1562564219-01c9a21c550d?auto=format&fit=crop&w=800&q=80',
+    hoverImageUrl: 'https://images.unsplash.com/photo-1580137189272-c9379f8864fd?auto=format&fit=crop&w=800&q=80',
     swatches: [
       { name: 'Ivory Cream', hex: '#FAF9F6', imageIndex: 6 },
       { name: 'Warm Stone', hex: '#9E9589', imageIndex: 7 },
@@ -98,8 +98,8 @@ export const PRODUCTS: Product[] = [
     price: 159,
     rating: 4.8,
     reviewCount: 1654,
-    imageUrl: 'https://picsum.photos/seed/rug4/600/600',
-    hoverImageUrl: 'https://picsum.photos/seed/rug4_hover/600/600',
+    imageUrl: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800&q=80',
+    hoverImageUrl: 'https://images.unsplash.com/photo-1579656592043-a20e25a4aa4b?auto=format&fit=crop&w=800&q=80',
     swatches: [
       { name: 'Sage Green', hex: '#8A9B7E', imageIndex: 1 },
       { name: 'Blush Cream', hex: '#E8D5C4', imageIndex: 4 },
@@ -120,8 +120,8 @@ export const PRODUCTS: Product[] = [
     price: 145,
     rating: 4.6,
     reviewCount: 651,
-    imageUrl: 'https://picsum.photos/seed/rug5/600/600',
-    hoverImageUrl: 'https://picsum.photos/seed/rug5_hover/600/600',
+    imageUrl: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80',
+    hoverImageUrl: 'https://images.unsplash.com/photo-1617806118233-18e1db207f62?auto=format&fit=crop&w=800&q=80',
     swatches: [
       { name: 'Sage Green', hex: '#8A9B7E', imageIndex: 1 },
       { name: 'Warm Stone', hex: '#9E9589', imageIndex: 7 }
@@ -140,8 +140,8 @@ export const PRODUCTS: Product[] = [
     price: 89,
     rating: 4.8,
     reviewCount: 1102,
-    imageUrl: 'https://picsum.photos/seed/rug6/600/600',
-    hoverImageUrl: 'https://picsum.photos/seed/rug6_hover/600/600',
+    imageUrl: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80',
+    hoverImageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
     swatches: [
       { name: 'Charcoal Grey', hex: '#3D3530', imageIndex: 3 },
       { name: 'Natural Jute', hex: '#D4C8B8', imageIndex: 0 }
@@ -160,8 +160,8 @@ export const PRODUCTS: Product[] = [
     price: 175,
     rating: 4.7,
     reviewCount: 742,
-    imageUrl: 'https://picsum.photos/seed/rug7/600/600',
-    hoverImageUrl: 'https://picsum.photos/seed/rug7_hover/600/600',
+    imageUrl: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
+    hoverImageUrl: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=800&q=80',
     swatches: [
       { name: 'Ivory Cream', hex: '#FAF9F6', imageIndex: 6 },
       { name: 'Charcoal Grey', hex: '#3D3530', imageIndex: 3 }
@@ -180,8 +180,8 @@ export const PRODUCTS: Product[] = [
     price: 135,
     rating: 4.8,
     reviewCount: 541,
-    imageUrl: 'https://picsum.photos/seed/rug8/600/600',
-    hoverImageUrl: 'https://picsum.photos/seed/rug8_hover/600/600',
+    imageUrl: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=800&q=80',
+    hoverImageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80',
     swatches: [
       { name: 'Sage Green', hex: '#8A9B7E', imageIndex: 1 },
       { name: 'Natural Sand', hex: '#D4C8B8', imageIndex: 0 }
@@ -200,8 +200,8 @@ export const PRODUCTS: Product[] = [
     price: 155,
     rating: 4.9,
     reviewCount: 948,
-    imageUrl: 'https://picsum.photos/seed/rug9/600/600',
-    hoverImageUrl: 'https://picsum.photos/seed/rug9_hover/600/600',
+    imageUrl: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80',
+    hoverImageUrl: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80',
     swatches: [
       { name: 'Rust Terracotta', hex: '#C4614A', imageIndex: 2 },
       { name: 'Bold Charcoal', hex: '#1A1A1A', imageIndex: 3 }
@@ -220,8 +220,8 @@ export const PRODUCTS: Product[] = [
     price: 165,
     rating: 4.6,
     reviewCount: 421,
-    imageUrl: 'https://picsum.photos/seed/rug10/600/600',
-    hoverImageUrl: 'https://picsum.photos/seed/rug10_hover/600/600',
+    imageUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
+    hoverImageUrl: 'https://images.unsplash.com/photo-1471922694854-ff1b63b20054?auto=format&fit=crop&w=800&q=80',
     swatches: [
       { name: 'Indigo Blue', hex: '#4A5568', imageIndex: 8 },
       { name: 'Warm Stone', hex: '#9E9589', imageIndex: 7 }
@@ -240,8 +240,8 @@ export const PRODUCTS: Product[] = [
     price: 195,
     rating: 4.7,
     reviewCount: 1342,
-    imageUrl: 'https://picsum.photos/seed/rug11/600/600',
-    hoverImageUrl: 'https://picsum.photos/seed/rug11_hover/600/600',
+    imageUrl: 'https://images.unsplash.com/photo-1544030288-e6e6108867f8?auto=format&fit=crop&w=800&q=80',
+    hoverImageUrl: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=800&q=80',
     swatches: [
       { name: 'Ivory Cream', hex: '#FAF9F6', imageIndex: 6 },
       { name: 'Soft Blush', hex: '#E8D5C4', imageIndex: 4 }
@@ -260,8 +260,8 @@ export const PRODUCTS: Product[] = [
     price: 149,
     rating: 4.8,
     reviewCount: 1205,
-    imageUrl: 'https://picsum.photos/seed/rug12/600/600',
-    hoverImageUrl: 'https://picsum.photos/seed/rug12_hover/600/600',
+    imageUrl: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80',
+    hoverImageUrl: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=800&q=80',
     swatches: [
       { name: 'Rust Terracotta', hex: '#C4614A', imageIndex: 2 },
       { name: 'Sage Green', hex: '#8A9B7E', imageIndex: 1 }

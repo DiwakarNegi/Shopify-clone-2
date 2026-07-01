@@ -25,7 +25,7 @@ export default function Hero() {
         initial={{ scale: 1.06 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.6, ease: 'easeOut' }}
-        src="https://picsum.photos/seed/rugshero/1920/1080"
+        src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1920&q=80"
         alt="Warm living room with a washable area rug"
         className="absolute inset-0 w-full h-full object-cover object-center"
         loading="eager"

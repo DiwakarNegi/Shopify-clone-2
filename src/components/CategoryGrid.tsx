@@ -13,11 +13,11 @@ interface Category {
 }
 
 const categories: Category[] = [
-  { id: 'living-room', label: 'Living Room', subLabel: '240+ styles', imageUrl: 'https://picsum.photos/seed/livingroom/800/900', featured: true },
-  { id: 'bedroom',     label: 'Bedroom',     subLabel: '180+ styles', imageUrl: 'https://picsum.photos/seed/bedroomrug/800/440' },
-  { id: 'outdoor',     label: 'Outdoor',     subLabel: '90+ styles',  imageUrl: 'https://picsum.photos/seed/outdoorphoto/800/440' },
-  { id: 'kitchen',     label: 'Kitchen & Entry', subLabel: 'Runners & Mats', imageUrl: 'https://picsum.photos/seed/kitchenroom/800/440' },
-  { id: 'kids',        label: "Kids' Rooms", subLabel: 'Fun & washable',    imageUrl: 'https://picsum.photos/seed/kidsplay/800/440' },
+  { id: 'living-room', label: 'Living Room', subLabel: '240+ styles', imageUrl: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=800&q=80', featured: true },
+  { id: 'bedroom',     label: 'Bedroom',     subLabel: '180+ styles', imageUrl: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80' },
+  { id: 'outdoor',     label: 'Outdoor',     subLabel: '90+ styles',  imageUrl: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80' },
+  { id: 'kitchen',     label: 'Kitchen & Entry', subLabel: 'Runners & Mats', imageUrl: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80' },
+  { id: 'kids',        label: "Kids' Rooms", subLabel: 'Fun & washable',    imageUrl: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=800&q=80' },
 ]
 
 const containerVariants = {

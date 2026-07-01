@@ -99,7 +99,7 @@ export default function LifestyleBanner() {
         body="Our two-piece rug system separates into a rug face and a rug pad, both of which fit standard home washing machines up to king size. Forget the rug cleaner."
         ctaLabel="See How It Works"
         ctaHref="#"
-        imageUrl="https://placehold.co/960x640/c9b49a/3d3530?text=Dog+on+Rug+(Lifestyle)"
+        imageUrl="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=960&q=80"
         imageAlt="Dog relaxing on a washable area rug"
       />
 
@@ -109,7 +109,7 @@ export default function LifestyleBanner() {
         body="Whether your style is minimalist, maximalist, or somewhere in between, we have a pattern to match. All in sizes from 2×3 accent mats to 9×12 statement pieces."
         ctaLabel="Shop the Collection"
         ctaHref="#"
-        imageUrl="https://placehold.co/960x640/8a9b7e/ffffff?text=Pattern+Collection+Flatlay"
+        imageUrl="https://images.unsplash.com/photo-1579656592043-a20e25a4aa4b?auto=format&fit=crop&w=960&q=80"
         imageAlt="Flat lay of multiple rug patterns"
         reverse
         dark
